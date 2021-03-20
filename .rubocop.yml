@@ -1,0 +1,14 @@
+AllCops:
+  TargetRubyVersion: 2.7.2
+  Exclude:
+    - 'bin/*'
+    - 'db/schema.rb'
+    - 'db/migrate/*'
+    - 'vendor/**/*'
+    - 'tmp/**/*'
+    - 'storage/**/*'
+
+Style/Documentation:
+  Enabled: false
+Style/EmptyMethod:
+  Enabled: false
