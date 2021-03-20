@@ -1,4 +1,5 @@
 AllCops:
+  NewCops: enable
   TargetRubyVersion: 2.7.2
   Exclude:
     - 'bin/*'
@@ -7,6 +8,7 @@ AllCops:
     - 'vendor/**/*'
     - 'tmp/**/*'
     - 'storage/**/*'
+    - 'node_modules/**/*'
 
 Style/Documentation:
   Enabled: false
