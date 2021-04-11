@@ -11,6 +11,13 @@
   </head>
 
   <body>
-    <%= yield %>
+    <nav class='navbar navbar-expand-lg navbar-light bg-light mb-3'>
+      <div class="container-fluid">
+        <%= link_to 'Rails Security', root_path, class: 'navbar-brand' %>
+      </div>
+    </nav>
+    <div class='container'>
+      <%= yield %>
+    </div>
   </body>
 </html>
