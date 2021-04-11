@@ -1,0 +1,27 @@
+<div class='row'>
+  <div class='col'>
+    <h1>CSRF example</h1>
+  </div>
+</div>
+<div class='row'>
+  <div class='col'>
+    <%= link_to 'Send trap email', csrf_send_mail_path, class: 'btn btn-primary' %>
+  </div>
+</div>
+<div class='row'>
+  <div class='col'>
+    <div class='bg-light p-5 rounded-lg mt-4'>
+      <h2>Some sample records:</h2>
+      <% if @some_records.none? %>
+        No records yet.
+      <% end %>
+      <% @some_records.each do |some_record| %>
+        <div class='row'>
+          <div class='col'>
+            <%= "#{some_record.name} with priority #{some_record.priority}." %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

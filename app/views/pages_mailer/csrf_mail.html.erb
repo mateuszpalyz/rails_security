@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+  </head>
+  <body>
+    <h1>Welcome</h1>
+    <p>Some nice social engineering that encourages user to click link.</p>
+    <p>Thanks for clicking and have a great day!</p>
+    <%= button_to 'Bang! Form to url with csrf protection', csrf_on_destroy_url(SomeRecord.last), method: :delete %>
+    <%= button_to 'Bang! Form to url without csrf protection', csrf_off_destroy_url(SomeRecord.last), method: :delete %>
+  </body>
+</html>
