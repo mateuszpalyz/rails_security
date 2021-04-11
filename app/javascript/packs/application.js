@@ -9,3 +9,4 @@ import "channels"
 
 Rails.start()
 ActiveStorage.start()
+require('jquery')
