@@ -1,0 +1,26 @@
+<div class='row'>
+  <div class='col'>
+    <h1>XSS example</h1>
+    <div class='float-end'>
+      <%= link_to 'main page', root_path %>
+    </div>
+  </div>
+</div>
+<div class='row'>
+  <div class='col'>
+    <div class='bg-light p-5 rounded-lg mt-4'>
+      <h5>XSS vulnerable</h5>
+      <%= text_field_tag :some_field, "<script>alert('oh no, xss :(')</script>", class: 'form-control' %>
+      <%= link_to 'Check', xss_vulnerable_path, class: 'btn btn-primary mt-3' %>
+    </div>
+  </div>
+</div>
+<div class='row'>
+  <div class='col'>
+    <div class='bg-light p-5 rounded-lg mt-4'>
+      <h5>XSS free</h5>
+      <%= text_field_tag :some_field, "<script>alert('oh no, xss :(')</script>", class: 'form-control' %>
+      <%= link_to 'Check', xss_free_path, class: 'btn btn-primary mt-3' %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<div class='row'>
+  <div class='col'>
+    <h1>XSS example</h1>
+    <div class='float-end'>
+      <%= link_to 'xss page', xss_path %>
+      <%= link_to 'main page', root_path %>
+    </div>
+  </div>
+</div>
+<div class='row'>
+  <div class='col'>
+    <div class='bg-light p-5 rounded-lg mt-4'>
+      <h5>XSS vulnerable</h5>
+      String from user input &#128073;
+      <%= "<script>alert('oh no, xss :(')</script>".html_safe %>
+    </div>
+  </div>
+</div>

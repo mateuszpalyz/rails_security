@@ -1,11 +1,9 @@
 <div class='row'>
   <div class='col'>
     <h1>CSRF example</h1>
-  </div>
-</div>
-<div class='row'>
-  <div class='col'>
-    <%= link_to 'Send trap email', csrf_send_mail_path, class: 'btn btn-primary' %>
+    <div class='float-end'>
+      <%= link_to 'main page', root_path %>
+    </div>
   </div>
 </div>
 <div class='row'>
@@ -23,5 +21,10 @@
         </div>
       <% end %>
     </div>
+  </div>
+</div>
+<div class='row'>
+  <div class='col mt-4'>
+    <%= link_to 'Send trap email', csrf_send_mail_path, class: 'btn btn-primary' %>
   </div>
 </div>

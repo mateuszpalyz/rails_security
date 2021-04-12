@@ -25,6 +25,15 @@ class PagesController < ApplicationController
     destroy
   end
 
+  def xss
+  end
+
+  def xss_vulnerable
+  end
+
+  def xss_free
+  end
+
   private
 
   def destroy
