@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   get 'xss', to: 'pages#xss'
   get 'xss_vulnerable', to: 'pages#xss_vulnerable'
   get 'xss_free', to: 'pages#xss_free'
+  get 'sql_injection', to: 'pages#sql_injection'
 end

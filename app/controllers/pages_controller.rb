@@ -34,6 +34,10 @@ class PagesController < ApplicationController
   def xss_free
   end
 
+  def sql_injection
+    @some_records = SomeRecord.where('name like ?', "%#{params.dig(:query, :name)}%")
+  end
+
   private
 
   def destroy

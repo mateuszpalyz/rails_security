@@ -1,0 +1,39 @@
+<div class='row'>
+  <div class='col'>
+    <h1>SQL injection example</h1>
+    <div class='float-end'>
+      <%= link_to 'main page', root_path %>
+    </div>
+  </div>
+</div>
+<div class='row'>
+  <div class='col'>
+    <div class='bg-light p-5 rounded-lg mt-4'>
+      <h5>Some Records (not Some Other Records for sure)</h5>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Priority</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @some_records.each do |some_record| %>
+            <tr>
+              <td><%= some_record.name %></td>
+              <td><%= some_record.priority %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<div class='row'>
+  <div class='col'>
+    <%= form_for :query, url: sql_injection_path, method: :get do |f| %>
+      <%= f.text_field :name, class: 'form-control', placeholder: 'Search by name', value: params.dig('query', 'name') %>
+      <%= f.submit 'Search', class: 'btn btn-primary mt-2' %>
+    <% end  %>
+  </div>
+</div>
