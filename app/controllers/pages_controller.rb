@@ -35,7 +35,8 @@ class PagesController < ApplicationController
   end
 
   def sql_injection
-    @some_records = SomeRecord.where('name like ?', "%#{params.dig(:query, :name)}%")
+    # @some_records = SomeRecord.where('name like ?', "%#{params.dig(:query, :name)}%") # without sql injection
+    @some_records = SomeRecord.where("name like '%#{params.dig(:query, :name)}%'") # with sql injection
   end
 
   private
