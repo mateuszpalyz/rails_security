@@ -20,6 +20,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'brakeman'
   gem 'letter_opener'
   gem 'listen', '~> 3.3'
   gem 'spring'
